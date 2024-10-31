@@ -1,0 +1,707 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="utf-8">
+        <title>Marayuuu</title>
+
+        <style>
+            /* Styling untuk background pop-up */
+            .modal {
+                display: none; /* Mulai dalam keadaan tersembunyi */
+                position: fixed;
+                z-index: 1;
+                left: 0;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(0, 0, 0, 0.5); /* Warna background transparan */
+            }
+    
+            /* Kotak pop-up */
+            .modal-content {
+                background-color: white;
+                margin: 15% auto;
+                padding: 20px;
+                border: 1px solid #888;
+                width: 300px;
+                text-align: center;
+            }
+    
+            /* Tombol untuk menutup pop-up */
+            .close {
+                color: #aaa;
+                float: right;
+                font-size: 28px;
+                font-weight: bold;
+                cursor: pointer;
+            }
+    
+            .close:hover,
+            .close:focus {
+                color: black;
+                text-decoration: none;
+                cursor: pointer;
+            }
+        </style>
+
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="" name="keywords">
+        <meta content="" name="description">
+
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Open+Sans:wght@400;500;600&family=Petit+Formal+Script&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="lib/animate/animate.min.css" rel="stylesheet">
+        <link href="lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="css/style.css" rel="stylesheet">
+    </head>
+
+    <body data-bs-spy="scroll" data-bs-target="#navBar" id="weddingHome">
+
+        <!-- Spinner Start -->
+        <div id="spinner" class="show w-100 vh-100 bg-white position-fixed translate-middle top-50 start-50  d-flex align-items-center justify-content-center">
+            <div class="spinner-grow text-primary" role="status"></div>
+        </div>
+        <!-- Spinner End -->
+
+
+        <!-- Navbar start -->
+        <div class="container-fluid sticky-top px-0">
+            <div class="container-fluid">
+                <div class="container px-0">
+                    <nav class="navbar navbar-light navbar-expand-xl" id="navBar">
+                        <a href="index.html" class="navbar-brand">
+                            <h4 class="text-primary display-6 fw-bold mb-0">Hbd<strong class="text-secondary">&nbsp;&nbsp;</strong>Andilakuuu</h4>
+                        </a>
+                        <button class="navbar-toggler py-2 px-3" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                            <span class="fa fa-bars text-primary"></span>
+                        </button>
+                        <div class="collapse navbar-collapse py-3" id="navbarCollapse">
+                            <div class="navbar-nav mx-auto border-top">
+                                <a href="#weddingHome" class="nav-item nav-link active">Home</a>
+                                <!-- <a href="#weddingAbout" class="nav-item nav-link">About</a>
+                                <a href="#weddingStory" class="nav-item nav-link">Story</a>
+                                <a href="#weddingTimeline" class="nav-item nav-link">Timeline</a>
+                                <a href="#weddingGallery" class="nav-item nav-link">Gallery</a>
+                                <a href="#weddingRsvp" class="nav-item nav-link">RSVP</a> -->
+                            </div>
+                            <!-- <div class="d-flex align-items-center flex-nowrap pt-xl-0">
+                                <a href="#weddingRsvp" class="btn btn-primary btn-primary-outline-0 py-2 px-4 ms-4">Book Attendance</a>
+                            </div> -->
+                        </div>
+                    </nav>
+                </div>
+            </div>
+        </div>
+        <!-- Navbar End -->
+
+
+
+        <!-- Carousel Start -->
+        <div class="container-fluid carousel-header px-0">
+            <div id="carouselId" class="carousel slide" data-bs-ride="carousel">
+                <ol class="carousel-indicators">
+                    <li data-bs-target="#carouselId" data-bs-slide-to="0" class="active"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="1"></li>
+                    <li data-bs-target="#carouselId" data-bs-slide-to="2"></li>
+                </ol>
+                <div class="carousel-inner" role="listbox">
+                    <div class="carousel-item active">
+                        <img src="img/DSA.jpeg" class="img-fluid" alt="Image">
+                        <div class="carousel-caption">
+                            <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px;">
+                                <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-4" style="border-style: double;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">Happy Birthday</h4>
+                                </div>
+                                <h1 class="display-1 text-capitalize text-white mb-3">Ni Putu Sri Ayu Purnama Sari</h1>
+                                <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-5" style="border-style: double;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">31 Oktober 2024</h4>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/GDCH.jpeg" class="img-fluid" alt="Image">
+                        <div class="carousel-caption">
+                            <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px;">
+                                <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-5" style="border-style: double;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">Happy Birthday</h4>
+                                </div>
+                                <h1 class="display-1 text-capitalize text-white mb-3">Ni Putu Sri Ayu Purnama Sari</h1>
+                                <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-5" style="border-style: double;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">31 Oktober 2024</h4>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <img src="img/SRDG.jpeg" class="img-fluid bg-secondary" alt="Image">
+                        <div class="carousel-caption">
+                            <div class="p-3 mx-auto animated zoomIn" style="max-width: 900px;">
+                                <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-4" style="border-style: double;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">Happy Birthday</h4>
+                                </div>
+                                <h1 class="display-1 text-capitalize text-white mb-3">Ni Putu Sri Ayu Purnama Sari</h1>
+                                <div class="d-inline-block border-end-0 border-start-0 border-secondary p-2 mb-5" style="border-style: double;">
+                                    <h4 class="text-white text-uppercase fw-bold mb-0" style="letter-spacing: 3px;">31 Oktober 2024</h4>
+                                </div>
+                                <div class="d-flex align-items-center justify-content-center">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselId" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselId" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <!-- Carousel End -->
+
+
+        <!-- Hello! Start -->
+        <div class="container-fluid position-relative py-5" id="weddingAbout">
+            <div class="position-absolute" style="top: -35px; right: 0;">
+                <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="position-absolute" style="top: -10px; left: 0; transform: rotate(150deg);">
+                <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="container position-relative py-5">
+                <div class="mx-auto text-center mb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800;">
+                    <h1 class="text-primary display-1">Hello!</h1>
+                    <h4 class="text-dark mb-0"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-through-heart" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M2.854 15.854A.5.5 0 0 1 2 15.5V14H.5a.5.5 0 0 1-.354-.854l1.5-1.5A.5.5 0 0 1 2 11.5h1.793l.53-.53c-.771-.802-1.328-1.58-1.704-2.32-.798-1.575-.775-2.996-.213-4.092C3.426 2.565 6.18 1.809 8 3.233c1.25-.98 2.944-.928 4.212-.152L13.292 2 12.147.854A.5.5 0 0 1 12.5 0h3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.854.354L14 2.707l-1.006 1.006c.236.248.44.531.6.845.562 1.096.585 2.517-.213 4.092-.793 1.563-2.395 3.288-5.105 5.08L8 13.912l-.276-.182a22 22 0 0 1-2.685-2.062l-.539.54V14a.5.5 0 0 1-.146.354zm2.893-4.894A20.4 20.4 0 0 0 8 12.71c2.456-1.666 3.827-3.207 4.489-4.512.679-1.34.607-2.42.215-3.185-.817-1.595-3.087-2.054-4.346-.761L8 4.62l-.358-.368c-1.259-1.293-3.53-.834-4.346.761-.392.766-.464 1.845.215 3.185.323.636.815 1.33 1.519 2.065l1.866-1.867a.5.5 0 1 1 .708.708z"/>
+                      </svg> Happy Birthday Cantikkk <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-emoji-kiss" viewBox="0 0 16 16">
+                        <path fill-rule="evenodd" d="M12.493 13.368a7 7 0 1 1 2.489-4.858c.344.033.68.147.975.328a8 8 0 1 0-2.654 5.152 9 9 0 0 1-.81-.622m-3.731-3.22a13 13 0 0 0-1.107.318.5.5 0 1 1-.31-.95c.38-.125.802-.254 1.192-.343.37-.086.78-.153 1.103-.108.16.022.394.085.561.286.188.226.187.497.131.705a1.9 1.9 0 0 1-.31.593q-.115.16-.275.343.16.186.276.347c.142.197.256.397.31.595.055.208.056.479-.132.706-.168.2-.404.262-.563.284-.323.043-.733-.027-1.102-.113a15 15 0 0 1-1.191-.345.5.5 0 1 1 .31-.95c.371.12.761.24 1.109.321q.264.062.446.084a6 6 0 0 0-.502-.584.5.5 0 0 1 .002-.695 5.5 5.5 0 0 0 .5-.577 5 5 0 0 0-.448.082Zm.766-.087-.003-.001-.003-.001zm.002 1.867-.006.001zM6 8c.552 0 1-.672 1-1.5S6.552 5 6 5s-1 .672-1 1.5S5.448 8 6 8m2.757-.563a.5.5 0 0 0 .68-.194.93.93 0 0 1 .813-.493c.339 0 .645.19.813.493a.5.5 0 0 0 .874-.486A1.93 1.93 0 0 0 10.25 5.75c-.73 0-1.356.412-1.687 1.007a.5.5 0 0 0 .194.68M14 9.828c1.11-1.14 3.884.856 0 3.422-3.884-2.566-1.11-4.562 0-3.421Z"/>
+                      </svg></h4> 
+                </div>
+                <div class="row">
+                    <div class="col-lg-12">
+                        <div class="row g-4 align-items-center">
+                            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="d-flex">
+                                    <div class="text-end my-auto pe-4">
+                                        <h1 class="text-primary mb-3">I</h1>
+                                        <p class="text-dark mb-0" style="line-height: 30px;">
+                                            Selamat ulang tahun, cintaku, Ni Putu Sri Ayu Purnama Sari! Di hari istimewa ini, beta ingin mengingatkan betapa beruntungnya beta memiliki andila di hidup ini. andila adalah sumber kebahagiaan, inspirasi, dan kekuatan yang tak ternilai par beta. Setiap senyum, tawa, dan kehadiranmu membuat beta hari-hari lebih indah. Terima kasih sudah menjadi dirimu yang 
+                                    </div>
+                                    <img src="img/1.jpeg" width="150px" height="150px" class="img-fluid img-border" alt="">
+                                </div>
+                            </div>
+                            <div class="col-lg-2 wow fadeIn" data-wow-delay="0.5s">
+                                <div class="d-flex align-items-center justify-content-center">
+                                    <i class="fa fa-heart fa-5x text-primary"></i>
+                               </div>
+                            </div>
+                            <div class="col-lg-5 wow fadeInUp" data-wow-delay="0.3s">
+                                <div class="d-flex">
+                                    <img src="img/2.jpeg" width="150px" height="150px" class="img-fluid img-border" alt="">
+                                    <div class="my-auto ps-4">
+                                        <h1 class="text-primary mb-3">U</h1>
+                                        <p class="text-dark mb-0" style="line-height: 30px;">
+                                            luar biasa, dan terima kasih untuk setiap momen yang katong bagi. beta akan selalu ada untuk andila, dalam suka maupun duka. Selamat ulang tahun, sayangku! malekem mencintaimu lebih dari kata-kata yang bisa beta mengungkapkan. Semoga tahun ini membawakanmu kebahagiaan, cinta, dan kesuksesan yang andila layak dapatkan.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Hello! End -->
+
+
+       
+
+        <!-- Story Start -->
+        <div class="container-fluid story position-relative py-5" id="weddingStory">
+            <div class="position-absolute" style="top: -35px; right: 0;">
+                <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="position-absolute" style="top: -15px; left: 0; transform: rotate(150deg);">
+                <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="container position-relative py-5">
+                <div class="text-center mb-5 wow fadeInUp" data-wow-delay="0.1s">
+                    <h5 class="text-uppercase text-primary fw-bold mb-4">Story</h5>
+                    <h1 class="display-4">Our Love Story</h1>
+                </div>
+                <div class="story-timeline">
+                    <div class="row wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="col-md-6 text-end border-0 border-top border-end border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/3.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="mb-2 text-dark">first Impression</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">28 Des 2023</p>
+                                <p class="m-0 fs-5">Hari Dimana Katong Pertama Kali Pigi Nonton</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.3s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">New Year</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">01 Jan 2024</p>
+                                <p class="m-0 fs-5">Tahun Baru Pertama Kali Bersamamu Dan Bakar Kembang Api</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <a href="vidio/VID-20240101-WA0007.mp4" target="_blank"><img src="img/4.jpeg" class="img-fluid w-100 img-border" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/5.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Christmas Tree</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">11 Jan 2024</p>
+                                <p class="m-0 fs-5">Pertama Kali Ke Pohon Natal Bersamamu (Tapi ada mami & ma e)</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Sunrise</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">24 Feb 2024</p>
+                                <p class="m-0 fs-5">Hari Dimana effort par bangun pagi cuman par pigi foto di paralayang</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/6.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/7.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Billiards Date</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">14 Mar 2024</p>
+                                <p class="m-0 fs-5">Pertama kali foto sedekat itu (:</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Mami Birthday</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">31 Mar 2024</p>
+                                <p class="m-0 fs-5">Hari dimana mami ultah dan untuk pertama kalinya beta dudu dengan ayang keluarga</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/8.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <a href="vidio/lv_7348651845063101703_20240604215235.mp4" target="_blank"><img src="img/9.jpeg" class="img-fluid w-100 img-border" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Liang</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">01 Mei 2024</p>
+                                <p class="m-0 fs-5">Rencana darurut selalu psati akan berjalan mulus</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Teluk Ambon</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">04 Mei 2024</p>
+                                <p class="m-0 fs-5">Again with mami dan ma e di teluk ambon</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/10.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/11.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Decor</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">27 Mei 2024</p>
+                                <p class="m-0 fs-5">Bantu dekor untuk mencari sesuap nasi :)</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">First Shopping</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">11 Jan 2024</p>
+                                <p class="m-0 fs-5">Berburu celana panjang di CB </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/12.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/13.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">First Kondagan</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">28 Jun 2024</p>
+                                <p class="m-0 fs-5">Hari dimana pigi ka ayang saudara nikahan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Incident With Drama Queen</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">27 Jul 2024</p>
+                                <p class="m-0 fs-5">Hari insiden diamana malekem ada menderita tagal urung mar andila tinggal katawa</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/14.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <a href="vidio/VID-20240811-WA0017.mp4" target="_blank"><img src="img/15.jpeg" class="img-fluid w-100 img-border" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">First Party</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">11 Agu 2024</p>
+                                <p class="m-0 fs-5">Party di warbox tapi lagunya mengecewakan</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Liliboy</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">18 Agu 2024</p>
+                                <p class="m-0 fs-5">Kangen itu berat jadi samperin aja ngak sih :)</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/16.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/17.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">First Photobox</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">07 Sep 2024</p>
+                                <p class="m-0 fs-5">Take pertama kurang bagus dan mood seng bae akhirnya katong foto ke 2</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Happy</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">10 Sep 2024</p>
+                                <p class="m-0 fs-5">Bahagia hanya dengan ice cream dan minions</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                               <a href="vidio/VID_20241031_133320.mp4" target="_blank">  <img src="img/18.jpeg" class="img-fluid w-100 img-border" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="col-md-6 text-end border-end border-top border-secondary p-4 ps-0">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <a href="vidio/VID-20240914-WA0134.mp4" target="_blank"><img src="img/19.jpeg" class="img-fluid w-100 img-border" alt=""></a>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border-start border-top border-secondary p-4 pe-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">Trip Morela & Moki</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">14 Sep 2024</p>
+                                <p class="m-0 fs-5">Setelah sekian purnama rencana ka moki dan tercapai juga</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="row flex-column-reverse flex-md-row wow fadeInUp" data-wow-delay="0.5s">
+                        <div class="col-md-6 text-end border border-start-0 border-secondary p-4 ps-0">
+                            <div class="h-100 d-flex flex-column justify-content-center bg-secondary p-4">
+                                <h4 class="text-dark mb-2">First Fresh Flowers</h4>
+                                <p class="text-uppercase text-primary mb-2" style="letter-spacing: 3px;">15 Sep 2024</p>
+                                <p class="m-0 fs-5">Sebahagia itu beta ayang mendapatkan fresh flowers</p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 border border-end-0 border-secondary p-4">
+                            <div class="d-inline-flex align-items-center h-100">
+                                <img src="img/20.jpeg" class="img-fluid w-100 img-border" alt="">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <!-- Story End -->
+
+      
+
+        
+
+
+        <!-- Gallery Start -->
+        <div class="container-fluid gallery position-relative py-5" id="weddingGallery">
+            <div class="position-absolute" style="top: -95px; right: 0;">
+                <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="position-absolute" style="top: -80px; left: 0; transform: rotate(150deg);">
+                <img src="img/tamp-bg-1.png" class="img-fluid" alt="">
+            </div>
+            <div class="container position-relative py-5">
+                <div class="text-center mx-auto pb-5 wow fadeInUp" data-wow-delay="0.1s" style="max-width: 800px;">
+                    <h1 class="display-2 text-dark">Aib</h1>
+                </div>
+                <div class="row g-4">
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.2s">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img class="img-fluid w-100" src="img/21.jpeg" alt="">
+                                <div class="hover-style"></div>
+                                <div class="search-icon">
+                                    <a href="img/21.jpeg" data-lightbox="Gallery-1" class="my-auto"><i class="fas fa-plus btn-primary btn-primary-outline-0 p-3"></i></a>
+                                </div>
+                            </div>
+                            <div class="gallery-overlay bg-light border-secondary border-top-0 p-4" style="border-style: double;">
+                                <h5>Ingos mancur</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.4s">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img class="img-fluid w-100" src="img/22.jpeg" alt="">
+                                <div class="hover-style"></div>
+                                <div class="search-icon">
+                                    <a href="img/22.jpeg" data-lightbox="Gallery-2" class="my-auto"><i class="fas fa-plus btn-primary btn-primary-outline-0 p-3"></i></a>
+                                </div>
+                            </div>
+                            <div class="gallery-overlay bg-light border-secondary border-top-0 p-4" style="border-style: double;">
+                                <h5>Cungkel harta karun</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.6s">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img class="img-fluid w-100" src="img/23.jpeg" alt="">
+                                <div class="hover-style"></div>
+                                <div class="search-icon">
+                                    <a href="img/23.jpeg" data-lightbox="Gallery-3" class="my-auto"><i class="fas fa-plus btn-primary btn-primary-outline-0 p-3"></i></a>
+                                </div>
+                            </div>
+                            <div class="gallery-overlay bg-light border-secondary border-top-0 p-4" style="border-style: double;">
+                                <h5>Tahan mulu itu</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-4 col-xl-3 wow fadeInUp" data-wow-delay="0.8s">
+                        <div class="gallery-item">
+                            <div class="gallery-img">
+                                <img class="img-fluid w-100" src="img/24.jpeg" alt="">
+                                <div class="hover-style"></div>
+                                <div class="search-icon">
+                                    <a href="img/24.jpeg" data-lightbox="Gallery-4" class="my-auto"><i class="fas fa-plus btn-primary btn-primary-outline-0 p-3"></i></a>
+                                </div>
+                            </div>
+                            <div class="gallery-overlay bg-light border-secondary border-top-0 p-4" style="border-style: double;">
+                                <h5>Vampire ompong</h5>
+                            </div>
+                        </div>
+                    </div>
+                    
+                 
+                </div>
+            </div>
+        </div>
+        <!-- Gallery end -->
+
+
+        
+        <!-- RSVP Form Start -->
+        <div class="container-fluid RSVP-form py-5" id="weddingRsvp">
+            <div class="container py-5">
+                <div class="mb-5 text-center mx-auto wow fadeIn" data-wow-delay="0.1s" style="max-width: 800px;">
+                   <center> <a href="pesan.html"><script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script> 
+                    <dotlottie-player src="https://lottie.host/27d31577-8acc-4603-8c54-bd88c0f3b522/gjHvLYS7ON.json" background="transparent" speed="1" style="width: 300px; height: 300px;" loop autoplay></dotlottie-player> </center>
+                </a>
+                </div>
+               
+            </div>
+        </div>
+        <!-- RSVP Form End -->
+
+        <!-- Copyright Start -->
+        <div class="container-fluid copyright py-4">
+            <div class="container">
+                <div class="row g-4 align-items-center">
+                    <div class="col-md-6 text-center text-md-start mb-md-0">
+                        <span class="text-light"><a href="#"><i class="fas fa-copyright text-light me-2"></i>Andilaaa</a>, All right reserved.</span>
+                    </div>
+                    <div class="col-md-6 text-center text-md-end text-white">
+                        <!--/*** This template is free as long as you keep the below author’s credit link/attribution link/backlink. ***/-->
+                        <!--/*** If you'd like to use the template without the below author’s credit link/attribution link/backlink, ***/-->
+                        <!--/*** you can purchase the Credit Removal License from "https://htmlcodex.com/credit-removal". ***/-->
+                        Designed By Malekem Codex</a> 
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Copyright End -->
+
+        <!-- <audio autoplay loop>
+            <source src="lagu/lagu.mp3" type="audio/mpeg">
+        </audio> -->
+
+<!-- Pop-up Modal -->
+<!-- Pop-up Modal -->
+<div id="myModal" class="modal">
+    <div class="modal-content">
+        <span class="close">&times;</span>
+        <h2>Klik Play untuk Memutar Musik</h2>
+        <audio id="myAudio" controls controlsList="nodownload nofullscreen noremoteplayback">
+            <source src="lagu/Ed Sheeran - Perfect_cNGjD0VG4R8.mp3" type="audio/mpeg">
+            Browser Anda tidak mendukung pemutar audio.
+        </audio>
+    </div>
+</div>
+
+<script>
+    // Mendapatkan elemen modal
+    var modal = document.getElementById("myModal");
+
+    // Mendapatkan elemen <span> yang menutup modal
+    var span = document.getElementsByClassName("close")[0];
+
+    // Ketika halaman dimuat, buka modal otomatis
+    window.onload = function() {
+        modal.style.display = "block";
+    }
+
+    // Ketika pengguna mengklik <span> (x), tutup modal
+    span.onclick = function() {
+        modal.style.display = "none";
+    }
+
+    // Ketika pengguna mengklik di luar modal, tutup modal
+    window.onclick = function(event) {
+        if (event.target == modal) {
+            modal.style.display = "none";
+        }
+    }
+</script>
+
+
+
+
+        <!-- Back to Top -->
+        <a href="#" class="btn btn-primary btn-primary-outline-0 btn-md-square back-to-top"><i class="fa fa-arrow-up"></i></a>   
+
+        
+    <!-- JavaScript Libraries -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+    
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+    </body>
+
+</html>
